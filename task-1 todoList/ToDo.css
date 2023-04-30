@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    font-family: 'Noticia Text', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #172121;
+    color: #fff;
+}
+h1{
+    font-family: 'Noticia Text', serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 i {
+    padding: 20px 15px 15px 10px;
+    font-size: 26px;
+}
+.container {
+    padding: 30px;
+    width: 500px;
+    min-height: 100vh;
+    background: rgba( 255,  255,  255, .1);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+.container .box{
+    width: 100%;
+}
+.inputs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative
+    
+}
+.container .box input{
+    width: 100%;
+    padding: 15px 20px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+.container .box input:focus{
+    outline: none;
+}
+.container button{
+    width: 30%;
+    padding: 15px 20px 15px;
+    font-size: 16px;
+    background: #172121;
+    cursor: pointer;
+    color: #fff;
+    border:  none;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    position: absolute;
+    right: -3px;
+    outline: none;
+}
+
+.todo-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.todo-list li{
+    transition: width 2s linear;
+    text-transform: capitalize;
+    width: 100%;
+    padding: 15px 20px 15px;
+    margin: 5px 0;
+    font-size: 18px;
+    background: #7F7B82;
+    color: #fff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*position: relative;*/
+}
+.todo-list li:nth-child(odd){
+    background: #444554;
+    color: #fff;  
+}
+.todo-list li span i{
+    cursor: pointer;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.done{
+    text-decoration: line-through;
+    background-color: rgba(0 , 0 , 0 ,.5) !important;
+    color: grey !important;
+}
+
+@media (max-width:600px){
+    .container{
+        width: 350px;
+    }
+    .inputs button{
+        position: static;
+        width: 40%;
+    }
+}
